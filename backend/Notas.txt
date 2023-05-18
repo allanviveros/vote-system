@@ -1,0 +1,1 @@
+en la ruta comunas falta un codigo que controle cuando colocas un id de region que no esta en la db
