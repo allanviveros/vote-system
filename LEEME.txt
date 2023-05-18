@@ -1,0 +1,13 @@
+Informacion de las versiones:
+
+* apache version 2.4.56
+* PHP version 8.0.28
+* mysql version 8.0.28
+
+Para ejecutar:
+
+* para su desarrollo se uso xampp, la carpeta "vote" se coloca en la carpeta "htdocs"
+* para la base de datos se uso phpmyadmin, en la carpeta "db sql" se encuentra el Archivo
+vote.sql con las tablas y datos de ejemplos (por temas de ejemplo se colocaron 3 regiones,
+6 comunas y 2 candidato)
+* abrir index.html
