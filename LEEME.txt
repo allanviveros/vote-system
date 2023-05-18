@@ -7,8 +7,8 @@ Informacion de las versiones:
 Para ejecutar:
 
 * para su desarrollo se uso xampp, la carpeta "vote" se coloca en la carpeta "htdocs"
-* para la base de datos se uso phpmyadmin, en la carpeta "db sql" se encuentra el Archivo
-vote.sql con las tablas y datos de ejemplos (por temas de ejemplo se colocaron 3 regiones,
+* para la base de datos se uso phpmyadmin, en la carpeta "SQL" se encuentra el Archivo
+"vote.sql" la cual puede importar para tener la bd con las tablas y datos de ejemplos (por temas de ejemplo se colocaron 3 regiones,
 6 comunas y 2 candidato)
 * abrir index.html
 
