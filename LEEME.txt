@@ -11,3 +11,9 @@ Para ejecutar:
 vote.sql con las tablas y datos de ejemplos (por temas de ejemplo se colocaron 3 regiones,
 6 comunas y 2 candidato)
 * abrir index.html
+
+Nota:
+
+para le seccion "como se entero de nosotros", para la bd se guarda en la columna "media",
+se usa un string de 4 caracteres binarios, en dondee 1 el usuario se entero por ese medio
+y 0 que no, el orden es "web"|"tv"|"redes sociales"|"amigo"
