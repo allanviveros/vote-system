@@ -201,7 +201,7 @@ function ValidateForm() {
 	}
 
 	if (!Fn.validaRut(myRut.value)) {
-		alert("rut invalido");
+		alert("rut invalido, el formato debe ser sin puntos y con guion");
 		return condicion;
 	} 
 
