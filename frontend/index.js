@@ -174,24 +174,8 @@ function GetSelectOptionsId() {
 function ValidateForm() {
 	condicion = false;
 
-	id_comp = GetSelectOptionsId();
-	jsonForm = GenerateJsonForm(myName.value, myAlias.value, myRut.value, myEmail.value, id_comp[0], id_comp[1], id_comp[2], CheckParse()[1]);
-
-
-	let checkResult = CheckParse();
-
-	if (!checkResult[0]) {
-		alert("deben ser mas de 2 elecciones");
-		return condicion;
-	}
-
 	if (myName.value.length < 1) {
 		alert("el nombre no puede estar vacio");
-		return condicion;
-	}
-
-	if (!ValidateEmail(myEmail.value)) {
-		alert("patron de correo invalido");
 		return condicion;
 	}
 
@@ -202,6 +186,22 @@ function ValidateForm() {
 
 	if (!Fn.validaRut(myRut.value)) {
 		alert("rut invalido, el formato debe ser sin puntos y con guion");
+		return condicion;
+	}
+
+	if (!ValidateEmail(myEmail.value)) {
+		alert("patron de correo invalido");
+		return condicion;
+	}
+
+	id_comp = GetSelectOptionsId();
+	jsonForm = GenerateJsonForm(myName.value, myAlias.value, myRut.value, myEmail.value, id_comp[0], id_comp[1], id_comp[2], CheckParse()[1]);
+
+
+	let checkResult = CheckParse();
+
+	if (!checkResult[0]) {
+		alert("deben ser mas de 2 elecciones");
 		return condicion;
 	}
 
