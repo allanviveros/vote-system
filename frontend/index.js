@@ -203,7 +203,7 @@ function ValidateForm() {
 	if (!Fn.validaRut(myRut.value)) {
 		alert("rut invalido, el formato debe ser sin puntos y con guion");
 		return condicion;
-	} 
+	}
 
 	condicion = true;
 	return [condicion, jsonForm];
@@ -212,18 +212,21 @@ function ValidateForm() {
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	let resp = ValidateForm()
-	data = resp[1];
+	if (resp[0]) {
+		data = resp[1];
+		
+		fetch(postVotePath, {
+			method: "POST",
+			body: JSON.stringify(data),
+			headers: { "Content-type": "application/json" },
+			withCredentials: true,
+			crossorigin: true
+		})
+			.then(response => response.json())
+			.then(json => ResultPost(json))
+			.catch(err => console.log(err));
+	}
 
-	fetch(postVotePath, {
-		method: "POST",
-		body: JSON.stringify(data),
-		headers: { "Content-type": "application/json" },
-		withCredentials: true,
-		crossorigin: true
-	})
-		.then(response => response.json())
-		.then(json => ResultPost(json))
-		.catch(err => console.log(err));
 });
 
 //detectar cuando el usuario cambia la region para actulizar el desplegable de las comunas

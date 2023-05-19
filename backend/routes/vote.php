@@ -26,20 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo json_encode($register);
 }
 
-// valida si el usuario ya voto (a partir del rut), si no ha votado lo guarda en la bd
-function ValidateRut($data)
-{
-    $rutUser = $data["rut"];
 
-    $voteInDb = SearchVoteByRut($rutUser);
-
-
-    if ($voteInDb == "null") {
-        return InsertVote($data);
-    } else {
-        return ["status" => -1, "msg" => "el usuario ya voto"];
-    }
-
-}
 
 ?>
